@@ -1,0 +1,79 @@
+    <!-- Dimmed overlay for No response -->
+    <div id="no-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(220,220,220,0.7); z-index:9999; text-align:center;">
+      <div style="margin-top:120px;">
+        <h2 style="font-family:'Dancing Script',cursive; color:#888; font-size:2rem; margin-bottom:24px;">Maybe some other time... 💔</h2>
+      </div>
+    </div>
+    <!-- Joyous celebration overlay -->
+    <div id="celebration-overlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(255,240,250,0.85); z-index:9999; text-align:center;">
+      <div style="margin-top:120px;">
+        <h1 style="font-family:'Dancing Script',cursive; color:#d9534f; font-size:2.5rem; margin-bottom:24px;">Yay! I'm so glad to begin this journey with you! 💖</h1>
+        <div id="flying-emojis"></div>
+      </div>
+    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love letter for crush</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="love letter 2.css" />
+  </head>
+  <body>
+    <!-- tiktok meowish -->
+    <!-- Envelope will be reused for both pages, only one envelope present -->
+    <div class="instruction" id="instruction">
+      <p>Open the box, I have something nice for you in it.</p>
+      <button id="open-box-btn" class="cute-btn">Open the Box</button>
+    </div>
+
+    <!-- Second page: sweet words and floating images inside the first envelope -->
+    <div id="second-page" style="display:none;">
+      <div class="envlope-wrapper" style="position:relative; width:340px; margin:60px auto 0 auto;">
+        <div id="envelope" class="open" style="position:relative;">
+          <div class="front flap"></div>
+          <div class="front pocket"></div>
+          <div class="letter" style="position:absolute; top:-40px; left:30px; width:220px; height:220px; box-shadow:0 2px 26px rgba(0,0,0,0.12); border-radius:12px; background:#fff; padding:4px 10px 12px 10px; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:flex-start;">
+            <div class="sweet-words" id="sweet-words" style="font-size:1.4rem; line-height:1.6; color:#d9534f; font-family:'Dancing Script',cursive; text-align:center; margin-bottom:8px;">You light up my world!</div>
+            <img src="her-photo1.jpg" alt="Her Photo" style="width:100px; height:60px; object-fit:cover; border-radius:8px; margin-top:8px; box-shadow:0 2px 8px rgba(0,0,0,0.10);" />
+          </div>
+        </div>
+      </div>
+      <div class="second-options" id="second-options" style="margin-top:40px; text-align:center;">
+        <button id="continue-more" class="cute-btn">Please continue to click for more</button>
+        <button id="back-btn" class="cute-btn">Back</button>
+      </div>
+      <div id="proposal-section" style="display:none; margin-top:40px; text-align:center;">
+        <div class="proposal-message" style="font-size:2rem; color:#d9534f; margin-bottom:24px;">Will you be my girlfriend?</div>
+        <button id="yes-proposal" class="cute-btn">Yes I will</button>
+        <button id="no-proposal" class="cute-btn">No, maybe some other time</button>
+        <div style="margin-top:24px;">
+          <button id="back-proposal" class="cute-btn">Back</button>
+          <button id="restart-proposal" class="cute-btn">Restart</button>
+        </div>
+      </div>
+    </div>
+    <!-- Removed envelope-flex and next/back buttons for original layout -->
+  <div class="options" id="options" style="display:none;">
+      <button id="yes" style="display:none;">Yes, I would love to!</button>
+      <button id="no" style="display:none;">Sorry, not yet</button>
+      <button id="restart-btn" class="cute-btn" style="display:none;">Restart</button>
+    </div>
+    <div id="happy-response" style="display:none;">
+      <div class="happy-message">
+        <h2>Yay! You said YES! 💖</h2>
+        <p>I am so happy to start this new journey with you!</p>
+        <div class="confetti"></div>
+      </div>
+    </div>
+
+    <audio id="romantic-music" src="romantic.mp3" preload="auto"></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+  <script src="love letter 2.js" defer></script>
+  </body>
+</html>
